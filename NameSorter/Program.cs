@@ -22,7 +22,7 @@ public class Program
 
         // Read the file and sort the names
         var fullNames = File.ReadAllLines(inputFile).ToList();
-        var sortedNames = NameSorterService.SortNames(fullNames).Select(p => p.ToString()).ToList();
+        var sortedNames = NameSorterService.SortNames(fullNames);
         
         sortedNames.ForEach(n => Console.WriteLine(n));
         File.WriteAllLines("sorted-names-list.txt", sortedNames);
